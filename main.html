@@ -1,0 +1,108 @@
+<!-- Basic Objectives:
+
+User selects rock, paper, or scissors
+Computer randomly chooses
+hint: have your choices in an array and randomly choose
+Display the user and computers choice on the screen
+Display the winner
+Bonus Objectives:
+
+Keep track of wins, losses, & ties
+remember this is only going to be until the user refreshes the browser. We don't have anything fetching from or posting to a database yet!
+Use images to make a choice
+hint: you can listen for the click event on any HTML element!
+Be able to start a new game without refreshing
+Track the percentage of times the user has won/lost / tied
+Color a win differently than a loss so it is easy to tell if the user won.
+hint: add and remove classes: http://stackoverflow.com/questions/195951/change-an-elements-class-with-javascript (Links to an external site.) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Ro Sham Bo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
+  </head>
+
+  <body>
+
+    <!-- Header -->
+
+    <header class="primary-header container group">
+
+    <h1 class="logo">
+      <a>Ro Sham Bo</a><!--
+      --><h3 class="tagline">Rock Paper Scissors</h3>
+    </h1>
+    <div class="banner">
+      <img class="banner-image" src="images/bannerRPS.jpg">
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+
+    <section class="hero container">
+
+      <h2>Only The Strong Survive</h2>
+      <p>choose your weapon by clicking the photo</p>
+    </section>
+
+  <!-- Teasers -->
+
+    <section class="row">
+      <div class="grid">
+
+    <!-- Rock -->
+
+    <section class="teaser col-1-3" id="rockBUTTON">
+      <h5>ROCK</h5>
+        <a class='button'>
+        <img src="images/kidrock.jpg" id="choiceRock" alt="Rock">
+        <h2 id="userChoice"></h2>
+      </a>
+    </section><!--
+
+      Paper
+
+   --><section class="teaser col-1-3" id='paperBUTTON'>
+      <h5>PAPER</h5>
+      <a class='button'>
+        <img src="images/paper.jpg" id="choicePaper" alt="Paper">
+
+      </a>
+
+    </section><!--
+
+    Scissors
+
+  --><section class="teaser col-1-3" id="scissorsBUTTON">
+      <h5>SCISSORS</h5>
+      <a class='button'>
+        <img src="images/scissors.jpg" id="choiceScissors" alt="Scissors">
+
+      </a>
+
+    </section>
+
+<!-- scroeboard -->
+<section>
+  <div id="scores">
+    <h3>Player Scores</h3>
+    <h2 id="wins">Wins</h2>
+    <h2 id="loses">Loses</h2>
+    <h2 id="ties">Ties</h2>
+
+    <br>
+    <h3>Computer Scores</h3>
+    <h2 id="computer_wins">Wins</h2>
+    <h2 id="computer_loses">Loses</h2>
+    <h2 id="computer_ties">Ties</h2>
+  </div>
+</section>
+
+<script src="rpsgame.js"></script>
+</body>
+</html>
